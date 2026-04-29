@@ -1,0 +1,75 @@
+happyeveryday / QQBot Agent 真实运行日志（跨日期脱敏版）
+来源：qqbot/logs/gateway-lifecycle-2026-04-18.log ~ 2026-04-29.log
+说明：仅保留能证明系统真实运行、自动恢复、长时间稳定运行的关键片段。
+
+【2026-04-18：早期连续恢复能力】
+[2026-04-18 09:03:45] ws_close code=1005 lastSeq=1
+[2026-04-18 09:03:46] ws_open sessionId=0fd47ed8-c5eb-44e3-b369-25f81648e408 lastSeq=1
+[2026-04-18 09:03:46] resume_attempt sessionId=0fd47ed8-c5eb-44e3-b369-25f81648e408 lastSeq=1
+[2026-04-18 09:03:46] resumed sessionId=0fd47ed8-c5eb-44e3-b369-25f81648e408 lastSeq=2
+[2026-04-18 09:05:33] ws_close code=1006 lastSeq=2
+[2026-04-18 09:05:47] ws_open sessionId=0fd47ed8-c5eb-44e3-b369-25f81648e408 lastSeq=2
+[2026-04-18 09:05:47] resume_attempt sessionId=0fd47ed8-c5eb-44e3-b369-25f81648e408 lastSeq=2
+[2026-04-18 09:05:48] resumed sessionId=0fd47ed8-c5eb-44e3-b369-25f81648e408 lastSeq=3
+
+【2026-04-19：复杂恢复与 reset by resume】
+[2026-04-19 02:50:11] ws_open sessionId=null lastSeq=null
+[2026-04-19 02:50:11] identify intents=群聊+私信+频道+交互
+[2026-04-19 02:50:11] ready sessionId=426a9f94-c519-4ecf-8257-d3f210d715f0 lastSeq=1
+[2026-04-19 02:50:14] ws_open sessionId=426a9f94-c519-4ecf-8257-d3f210d715f0 lastSeq=1
+[2026-04-19 02:50:14] resume_attempt sessionId=426a9f94-c519-4ecf-8257-d3f210d715f0 lastSeq=1
+[2026-04-19 02:50:14] resumed sessionId=426a9f94-c519-4ecf-8257-d3f210d715f0 lastSeq=2
+[2026-04-19 02:50:15] ws_close code=4902 reason=reset by resume lastSeq=2
+[2026-04-19 02:50:19] ws_open sessionId=null lastSeq=null
+[2026-04-19 02:50:19] identify intents=群聊+私信+频道+交互
+[2026-04-19 02:50:19] ready sessionId=4720a5b9-dd04-4c8f-9f8c-2610acbc61b3 lastSeq=1
+
+【2026-04-21：长时间网络故障后的指数退避重连与恢复】
+[2026-04-21 10:28:48] ws_close code=1006 lastSeq=1
+[2026-04-21 10:28:49] connect_failed error=Network error [/gateway]
+[2026-04-21 10:28:51] connect_failed error=Network error [/gateway]
+[2026-04-21 10:28:56] connect_failed error=Network error [/gateway]
+[2026-04-21 10:29:06] connect_failed error=Network error [/gateway]
+[2026-04-21 10:29:36] connect_failed error=Network error [/gateway]
+[2026-04-21 10:30:36] connect_failed error=Network error [/gateway]
+[2026-04-21 10:38:36] connect_failed error=Network error getting access_token
+[2026-04-21 10:49:37] connect_failed error=Network error getting access_token
+[2026-04-21 10:52:39] ws_open sessionId=1e029d67-0424-4250-8d9d-21e55598d02b lastSeq=1
+[2026-04-21 10:52:39] resume_attempt sessionId=1e029d67-0424-4250-8d9d-21e55598d02b lastSeq=1
+[2026-04-21 10:52:39] resumed sessionId=1e029d67-0424-4250-8d9d-21e55598d02b lastSeq=2
+
+【2026-04-22：稳定 resume 能力】
+[2026-04-22 15:40:26] ws_close code=1006 lastSeq=1
+[2026-04-22 15:40:28] ws_open sessionId=692faa76-4cfc-417e-92c4-17079356186f lastSeq=1
+[2026-04-22 15:40:29] resume_attempt sessionId=692faa76-4cfc-417e-92c4-17079356186f lastSeq=1
+[2026-04-22 15:40:29] resumed sessionId=692faa76-4cfc-417e-92c4-17079356186f lastSeq=2
+[2026-04-22 17:06:03] ws_close code=1006 lastSeq=1
+[2026-04-22 17:06:35] ws_open sessionId=eb2e677d-7b2c-4c46-9b2f-ad9096c81896 lastSeq=1
+[2026-04-22 17:06:35] resume_attempt sessionId=eb2e677d-7b2c-4c46-9b2f-ad9096c81896 lastSeq=1
+[2026-04-22 17:06:40] resumed sessionId=eb2e677d-7b2c-4c46-9b2f-ad9096c81896 lastSeq=2
+
+【2026-04-23：多次断点恢复】
+[2026-04-23 11:14:02] ws_close code=1006 lastSeq=5
+[2026-04-23 11:14:19] ws_open sessionId=8bf973cf-cdd8-4711-8b11-1a7dc4d9b0cc lastSeq=5
+[2026-04-23 11:14:19] resume_attempt sessionId=8bf973cf-cdd8-4711-8b11-1a7dc4d9b0cc lastSeq=5
+[2026-04-23 11:14:19] resumed sessionId=8bf973cf-cdd8-4711-8b11-1a7dc4d9b0cc lastSeq=6
+[2026-04-23 11:43:56] ws_close code=1006 lastSeq=10
+[2026-04-23 11:44:29] ws_open sessionId=8bf973cf-cdd8-4711-8b11-1a7dc4d9b0cc lastSeq=10
+[2026-04-23 11:44:29] resume_attempt sessionId=8bf973cf-cdd8-4711-8b11-1a7dc4d9b0cc lastSeq=10
+[2026-04-23 11:44:30] resumed sessionId=8bf973cf-cdd8-4711-8b11-1a7dc4d9b0cc lastSeq=11
+
+【2026-04-29：会话超时后的重建】
+[2026-04-29 20:30:17] server_reconnect sessionId=6ef94b9d-2420-459c-a95d-6c618b98eafb lastSeq=5
+[2026-04-29 20:30:17] ws_close code=4009 reason=Session timed out lastSeq=5
+[2026-04-29 20:30:17] schedule_reconnect delay=2000 attempt=2 shouldRefreshToken=true
+[2026-04-29 20:30:20] ws_open sessionId=null lastSeq=null
+[2026-04-29 20:30:20] identify intents=群聊+私信+频道+交互
+[2026-04-29 20:30:20] ready sessionId=3f68fbf5-5d25-4466-85e2-64beb66b696c lastSeq=1
+
+可证明的能力：
+1. 真实网关接入与鉴权
+2. 会话建立与长期在线运行
+3. 异常断开后的自动重连
+4. 基于 sessionId + lastSeq 的断点恢复
+5. 网络故障下的持续重试与恢复
+6. 会话超时后的新会话重建

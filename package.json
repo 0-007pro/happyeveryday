@@ -1,0 +1,55 @@
+{
+  "name": "happyeveryday-public-qqbot",
+  "version": "1.7.1",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "openclaw-qqbot": "./bin/qqbot-cli.js",
+    "qqbot": "./bin/qqbot-cli.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "src",
+    "skills",
+    "scripts",
+    "index.ts",
+    "preload.cjs",
+    "tsconfig.json",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "openclaw": {
+    "id": "openclaw-qqbot",
+    "extensions": [
+      "./preload.cjs"
+    ],
+    "channel": {
+      "id": "qqbot",
+      "label": "QQ Bot"
+    }
+  },
+  "scripts": {
+    "build": "tsc || true",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "openclaw": "*"
+  },
+  "homepage": "https://github.com/your-org/happyeveryday-public-qqbot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/happyeveryday-public-qqbot.git"
+  },
+  "license": "MIT"
+}
