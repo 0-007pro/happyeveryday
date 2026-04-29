@@ -1,6 +1,7 @@
 {
   "name": "happyeveryday-public-qqbot",
   "version": "1.7.1",
+  "description": "Intelligent companion and personalized content generation Agent system with a public QQBot channel plugin.",
   "private": true,
   "type": "module",
   "main": "dist/index.js",
@@ -46,10 +47,20 @@
   "peerDependencies": {
     "openclaw": "*"
   },
-  "homepage": "https://github.com/your-org/happyeveryday-public-qqbot",
+  "keywords": [
+    "openclaw",
+    "qqbot",
+    "agent",
+    "multi-agent",
+    "ai-companion",
+    "personalized-generation",
+    "chatbot",
+    "typescript"
+  ],
+  "homepage": "https://github.com/0-007pro/happyeveryday",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-org/happyeveryday-public-qqbot.git"
+    "url": "git+https://github.com/0-007pro/happyeveryday.git"
   },
   "license": "MIT"
 }
