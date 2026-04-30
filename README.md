@@ -394,7 +394,3 @@ npm run build
 `Agent` · `Multi-Agent` · `AI Companion` · `Personalized Generation` · `QQBot` · `OpenClaw` · `TypeScript`
 
 ---
-
-## 📄 License
-
-MIT
